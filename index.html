@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eşref Saati - Kişisel Odak ve Hedef Planlayıcı</title>
+  <title>Eşref Saati</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* Genel Ayarlar */
@@ -39,7 +39,7 @@
 
     header h1 {
       font-size: 3rem;
-      color: #f90606; /* kırmızı başlık */
+      color: #f90606;
       margin-bottom: 20px;
       text-shadow: 0 0 20px #f90606;
     }
@@ -67,6 +67,26 @@
       box-shadow: 0 0 20px #f90606;
     }
 
+    /* Store Buttons */
+    .store-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .store-buttons img {
+      height: 55px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .store-buttons img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #f90606;
+    }
+
     /* Bölümler */
     section {
       padding: 80px 20px;
@@ -82,14 +102,11 @@
       text-shadow: 0 0 10px #f90606;
     }
 
-    section p.section-desc {
+    section p {
       color: #FFFFFF;
       font-size: 1.1rem;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
       text-align: center;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     /* Feature Kartları */
@@ -97,6 +114,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      margin-top: 40px;
     }
 
     .feature-card {
@@ -121,20 +139,6 @@
     .feature-card p {
       color: #FFFFFF;
       font-size: 1rem;
-    }
-
-    /* Disclaimer Section */
-    .disclaimer {
-      background-color: #0d0d0d;
-      border-top: 1px solid #333;
-      padding: 60px 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    
-    .disclaimer strong {
-        color: #fff;
     }
 
     /* Footer */
@@ -163,60 +167,78 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <h1>Eşref Saati</h1>
-    <p>Zamanı yönet, hedeflerine odaklan.
-    <br><br>
-    Günlük yaşamın karmaşasında kaybolma. <strong>Eşref Saati</strong>, sana özel hesaplanan zaman pencereleriyle en verimli anını yakalamanı, hedeflerini belirlemeni ve günü bilinçli planlamanı sağlayan kişisel asistanındır.</p>
-    <a href="#features" class="btn-primary">Özellikleri Keşfet</a>
+    <p>
+      Hayatta attığımız her adım, söylediğimiz her söz, verdiğimiz her karar bir enerji taşır.  
+      Bazı anlar vardır, evrenle uyumlanır; niyetler açılır, yollar netleşir, dualar kabul kapısına daha yakın olur.
+    </p>
+    <p>
+      İşte buna <strong>Eşref Saati</strong> denir.  
+      O vakit, kalbinle niyetinin aynı ritimde attığı, görünmeyen kapıların kolayca aralandığı eşsiz bir zamandır.
+    </p>
+
+    <a href="#features" class="btn-primary">Eşref Saatini Keşfet</a>
+
+    <!-- STORE BUTTONS -->
+    <div class="store-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.asus.countdown" target="_blank" aria-label="Google Play Store">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+             alt="Google Play'den indir">
+      </a>
+
+      <a href="https://apps.apple.com/app/e%C5%9Fref-saati-odak-ve-zaman/id6755933600"
+         target="_blank" aria-label="App Store">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+             alt="App Store'dan indir">
+      </a>
+    </div>
   </header>
 
+  <!-- FEATURES SECTION -->
   <section id="features">
-    <h2>Neden Eşref Saati?</h2>
-    <p class="section-desc">Eşref Saati bir sayaçtan fazlasıdır; niyetlerinizi eyleme dönüştüren bir üretkenlik aracıdır.</p>
-    
+    <h2>Eşref Saati Nedir?</h2>
+    <p>Her insanın hayatında bazı anlar diğerlerinden daha güçlüdür. Bu anlarda:</p>
+
     <div class="features">
       <div class="feature-card">
-        <h3>🎯 Kişisel Hedef Takibi</h3>
-        <p>Sadece süreyi takip etme, o süre içinde ne yapacağını da planla. Odaklanma penceren için somut hedefler belirle ve tamamla.</p>
+        <h3>Dualar Daha Berrak</h3>
+        <p>O özel anda söylediğin dualar, kalpten doğar ve güçle evrene yayılır.</p>
       </div>
+
       <div class="feature-card">
-        <h3>⏱️ Akıllı Geri Sayım</h3>
-        <p>Demografik verilerinizi "tohum" olarak kullanan algoritmamız, size özel bir odaklanma süresi (window) hesaplar.</p>
+        <h3>Niyetler Kabul Kapısına Ulaşır</h3>
+        <p>İçten ve doğru niyetler, görünmeyen kapılardan daha hızlı geçer.</p>
       </div>
+
       <div class="feature-card">
-        <h3>🧠 Bilinçli Farkındalık</h3>
-        <p>Otomatikleşmiş rutinlerden çıkın. Geri sayım başladığında durun, nefes alın ve o anı en önemli işiniz için kullanın.</p>
+        <h3>Enerji Uyumlanır</h3>
+        <p>Senin enerjin ve evrensel akış birbirine ritim tutar, her şey daha net hissedilir.</p>
       </div>
+
       <div class="feature-card">
-        <h3>📊 Görsel Motivasyon</h3>
-        <p>Hedeflerinizi kartlar halinde görün. Süre akarken hedefinize sadık kalmanız için görsel bir hatırlatıcı sunar.</p>
+        <h3>Kişisel Zaman</h3>
+        <p>Herkesin Eşref Saati farklıdır. Uygulama senin için özel anını hesaplar.</p>
       </div>
+
       <div class="feature-card">
-        <h3>🚫 Sade ve Odaklı</h3>
-        <p>Karmaşık grafikler yok. Sizi yormayan, pil dostu karanlık mod ile sadece yapmanız gereken işe odaklanın.</p>
+        <h3>Ruhsal Rehber</h3>
+        <p>Bu özel anı hissetmen, içsel enerjini ve bilinçaltını hazırlar.</p>
       </div>
+
       <div class="feature-card">
-        <h3>🔐 Tam Veri Güvenliği</h3>
-        <p>Verileriniz 3. taraflarla paylaşılmaz. Hesabınızı sildiğinizde hedefleriniz dahil tüm verileriniz kalıcı olarak yok edilir.</p>
+        <h3>Farkındalık Yaratır</h3>
+        <p>Doğru zamanda adım atmak, hayatının akışını değiştirecek güçtedir.</p>
       </div>
     </div>
   </section>
 
-  <section class="disclaimer">
-    <div style="max-width: 800px; margin: 0 auto;">
-        <h3 style="color: #fff; margin-bottom: 15px;">Önemli Bilgilendirme</h3>
-        <p>Eşref Saati, zaman yönetimi ve kişisel planlama amacıyla geliştirilmiş bir <strong>üretkenlik (productivity)</strong> uygulamasıdır.</p>
-        <br>
-        <p>Bu uygulama bir fal, astroloji, kehanet veya geleceği tahmin etme aracı <strong>değildir.</strong> Üretilen tüm zaman dilimleri ve sayaçlar, kullanıcının gününü planlamasına yardımcı olmak ve zaman farkındalığı kazandırmak amacıyla sunulan rehber niteliğindeki verilerdir.</p>
-    </div>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Eşref Saati. Tüm hakları saklıdır. | <a href="mailto:esrefsaatiapp@gmail.com">Destek & İletişim</a></p>
-    <br>
-    <p style="font-size: 0.8rem; color: #555;">
-        <a href="#" style="color:#777;">Gizlilik Politikası</a> | <a href="#" style="color:#777;">Kullanım Koşulları</a>
+    <p>
+      &copy; 2026 Eşref Saati. Tüm hakları saklıdır. |
+      <a href="mailto:esrefsaatiapp@gmail.com">İletişim</a>
     </p>
   </footer>
 
