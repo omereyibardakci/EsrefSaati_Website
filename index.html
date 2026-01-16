@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eşref Saati</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Genel Ayarlar */
+    html {
+      scroll-behavior: smooth;
+    }
     * {
       box-sizing: border-box;
       margin: 0;
@@ -25,7 +29,6 @@
       color: inherit;
     }
 
-    /* Header */
     header {
       display: flex;
       flex-direction: column;
@@ -45,10 +48,9 @@
     }
 
     header p {
-      font-size: 1.2rem;
-      color: #FFFFFF;
-      max-width: 700px;
-      margin-bottom: 40px;
+      font-size: 1.15rem;
+      max-width: 720px;
+      margin-bottom: 20px;
     }
 
     .btn-primary {
@@ -56,9 +58,8 @@
       color: #FFFFFF;
       padding: 15px 30px;
       font-size: 1rem;
-      border: none;
       border-radius: 8px;
-      cursor: pointer;
+      margin-top: 20px;
       transition: 0.3s ease;
     }
 
@@ -67,19 +68,17 @@
       box-shadow: 0 0 20px #f90606;
     }
 
-    /* Store Buttons */
     .store-buttons {
       display: flex;
       gap: 20px;
-      justify-content: center;
-      align-items: center;
       margin-top: 30px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .store-buttons img {
       height: 55px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .store-buttons img:hover {
@@ -87,32 +86,38 @@
       box-shadow: 0 0 15px #f90606;
     }
 
-    /* Bölümler */
+    .disclaimer {
+      max-width: 820px;
+      margin-top: 40px;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background-color: #0f0f0f;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
     section {
       padding: 80px 20px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     section h2 {
       color: #f90606;
-      font-size: 2rem;
-      margin-bottom: 20px;
       text-align: center;
-      text-shadow: 0 0 10px #f90606;
+      margin-bottom: 20px;
     }
 
     section p {
-      color: #FFFFFF;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
       text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
     }
 
-    /* Feature Kartları */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       margin-top: 40px;
     }
@@ -131,116 +136,96 @@
       box-shadow: 0 0 20px #f90606;
     }
 
-    .feature-card h3 {
-      color: #f90606;
-      margin-bottom: 10px;
-    }
-
-    .feature-card p {
-      color: #FFFFFF;
-      font-size: 1rem;
-    }
-
-    /* Footer */
     footer {
-      text-align: center;
       padding: 40px 20px;
-      background-color: #000000;
-      color: #FFFFFF;
-      border-top: 1px solid #333333;
+      text-align: center;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
     }
 
     footer a {
       color: #f90606;
+      margin: 0 10px;
     }
 
-    @media(max-width: 600px){
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      section h2 {
-        font-size: 1.6rem;
-      }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Eşref Saati</h1>
-    <p>
-      Hayatta attığımız her adım, söylediğimiz her söz, verdiğimiz her karar bir enerji taşır.  
-      Bazı anlar vardır, evrenle uyumlanır; niyetler açılır, yollar netleşir, dualar kabul kapısına daha yakın olur.
-    </p>
-    <p>
-      İşte buna <strong>Eşref Saati</strong> denir.  
-      O vakit, kalbinle niyetinin aynı ritimde attığı, görünmeyen kapıların kolayca aralandığı eşsiz bir zamandır.
-    </p>
+<header>
+  <h1>Eşref Saati</h1>
 
-    <a href="#features" class="btn-primary">Eşref Saatini Keşfet</a>
+  <p>
+    Hayatta attığımız her adım, verdiğimiz her karar bir farkındalık taşır.
+    Bazı anlar vardır; odaklanmak kolaylaşır, düşünceler netleşir ve niyetler
+    daha bilinçli hale gelir.
+  </p>
 
-    <!-- STORE BUTTONS -->
-    <div class="store-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.asus.countdown" target="_blank" aria-label="Google Play Store">
-        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
-             alt="Google Play'den indir">
-      </a>
+  <p>
+    <strong>Eşref Saati</strong>, kişinin kendi iç dünyasıyla baş başa kaldığı,
+    zamanı daha bilinçli değerlendirmesine yardımcı olan bir farkındalık deneyimidir.
+  </p>
 
-      <a href="https://apps.apple.com/app/e%C5%9Fref-saati-odak-ve-zaman/id6755933600"
-         target="_blank" aria-label="App Store">
-        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-             alt="App Store'dan indir">
-      </a>
+  <a href="#features" class="btn-primary">Eşref Saatini Keşfet</a>
+
+  <div class="store-buttons">
+    <!-- Google Play linkini paket adı kesinleşene kadar ekleme -->
+    <!--
+    <a href="https://play.google.com/store/apps/details?id=com.omer.esrefsaati">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png">
+    </a>
+    -->
+
+    <a href="https://apps.apple.com/app/id6755933600" target="_blank">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
+    </a>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Bilgilendirme:</strong><br>
+    Eşref Saati uygulaması; fal, kehanet, geleceği tahmin etme veya
+    kesin sonuçlar sunma amacı taşımaz. Sunulan içerikler tamamen
+    kişisel farkındalık, odaklanma ve zaman yönetimi deneyimini
+    desteklemek amacıyla hazırlanmıştır.
+  </div>
+</header>
+
+<section id="features">
+  <h2>Eşref Saati Nedir?</h2>
+  <p>Günün belirli anlarını daha bilinçli değerlendirmek isteyenler için tasarlanmıştır.</p>
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>Odaklanma</h3>
+      <p>Zamanın farkına varmanı ve anı daha bilinçli yaşamanı destekler.</p>
     </div>
-  </header>
 
-  <!-- FEATURES SECTION -->
-  <section id="features">
-    <h2>Eşref Saati Nedir?</h2>
-    <p>Her insanın hayatında bazı anlar diğerlerinden daha güçlüdür. Bu anlarda:</p>
-
-    <div class="features">
-      <div class="feature-card">
-        <h3>Dualar Daha Berrak</h3>
-        <p>O özel anda söylediğin dualar, kalpten doğar ve güçle evrene yayılır.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Niyetler Kabul Kapısına Ulaşır</h3>
-        <p>İçten ve doğru niyetler, görünmeyen kapılardan daha hızlı geçer.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Enerji Uyumlanır</h3>
-        <p>Senin enerjin ve evrensel akış birbirine ritim tutar, her şey daha net hissedilir.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Kişisel Zaman</h3>
-        <p>Herkesin Eşref Saati farklıdır. Uygulama senin için özel anını hesaplar.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Ruhsal Rehber</h3>
-        <p>Bu özel anı hissetmen, içsel enerjini ve bilinçaltını hazırlar.</p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Farkındalık Yaratır</h3>
-        <p>Doğru zamanda adım atmak, hayatının akışını değiştirecek güçtedir.</p>
-      </div>
+    <div class="feature-card">
+      <h3>Kişisel Farkındalık</h3>
+      <p>Gün içindeki ritmini gözlemlemeni sağlar.</p>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      &copy; 2026 Eşref Saati. Tüm hakları saklıdır. |
-      <a href="mailto:esrefsaatiapp@gmail.com">İletişim</a>
-    </p>
-  </footer>
+    <div class="feature-card">
+      <h3>Rutin Oluşturma</h3>
+      <p>Kendine ayırdığın zamanı düzenli hale getirir.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2026 Eşref Saati  
+  </p>
+  <p>
+    <a href="privacy.html">Gizlilik Politikası</a> |
+    <a href="terms.html">Kullanım Şartları</a> |
+    <a href="mailto:esrefsaatiapp@gmail.com">İletişim</a>
+  </p>
+</footer>
 
 </body>
 </html>
